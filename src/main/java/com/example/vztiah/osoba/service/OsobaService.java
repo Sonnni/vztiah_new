@@ -26,6 +26,8 @@ public class OsobaService {
             o2.setId(o1.getId());
             o2.setMeno(o1.getMeno());
             o2.setPriezvisko(o1.getPriezvisko());
+            o2.setEmail(o1.getEmail());
+            o2.setPassword(o1.getPassword());
             vysledok.add(o2);
         }
         return vysledok;
@@ -35,6 +37,8 @@ public class OsobaService {
         OsobaEntity osobaEntity = new OsobaEntity();
         osobaEntity.setMeno(osobaDto.getMeno());
         osobaEntity.setPriezvisko(osobaDto.getPriezvisko());
+        osobaEntity.setEmail(osobaDto.getEmail());
+        osobaEntity.setPassword(osobaDto.getPassword());
         osobaRepository.save(osobaEntity);
     }
 }
