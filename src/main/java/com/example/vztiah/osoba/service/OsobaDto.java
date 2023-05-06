@@ -1,5 +1,7 @@
 package com.example.vztiah.osoba.service;
 
+import com.example.vztiah.osoba.persistence.OsobaEntity;
+
 public class OsobaDto {
 
     Long id;
@@ -39,4 +41,5 @@ public class OsobaDto {
     public String getPassword() {return password;}
 
     public void setPassword(String password) {this.password = password;}
+
 }

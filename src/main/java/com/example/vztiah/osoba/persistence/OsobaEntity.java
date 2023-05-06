@@ -11,7 +11,7 @@ public class OsobaEntity {
     String priezvisko;
     String email;
     String password;
-    public Course course;
+    //public Course course;
     @Id
     @GeneratedValue
     Long id;
@@ -56,19 +56,19 @@ public class OsobaEntity {
         this.password = password;
     }
 
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
-    }
-    public void createNewCourse(String name) {
-        Course newCourse = new Course(name);
-        this.course = newCourse;
-    }
-
-    public void deleteCourse() {
-        this.course = null;
-    }
+//    public Course getCourse() {
+//        return course;
+//    }
+//
+//    public void setCourse(Course course) {
+//        this.course = course;
+//    }
+//    public void createNewCourse(String name) {
+//        Course newCourse = new Course(name);
+//        this.course = newCourse;
+//    }
+//
+//    public void deleteCourse() {
+//        this.course = null;
+//    }
 }
