@@ -44,6 +44,7 @@ public class OsobaService {
         osobaEntity.setPassword(osobaDto.getPassword());
         osobaRepository.save(osobaEntity);
     }
+    @Transactional
     private OsobaDto mapOsobaEntityToOsobaDto(OsobaEntity osobaEntity) {
         OsobaDto osobaDto = new OsobaDto();
         osobaDto.setId(osobaEntity.getId());
@@ -53,7 +54,7 @@ public class OsobaService {
         osobaDto.setPassword(osobaEntity.getPassword());
         return osobaDto;
     }
-    @Override
+    @Transactional
     public OsobaDto updateOsoba(Long id, OsobaDto osobaDto) {
         Optional<OsobaEntity> osobaOptional = osobaRepository.findById(id);
         if (osobaOptional.isPresent()) {
@@ -69,7 +70,7 @@ public class OsobaService {
         }
     }
 
-
+    @Transactional
     public void deleteOsoba (Long id) {
         osobaRepository.deleteById(id);
     }

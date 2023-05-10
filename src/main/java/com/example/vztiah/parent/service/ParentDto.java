@@ -1,15 +1,10 @@
-package com.example.vztiah.osoba.service;
+package com.example.vztiah.parent.service;
 
-import com.example.vztiah.osoba.persistence.OsobaEntity;
-import org.springframework.stereotype.Service;
-
-
-public class OsobaDto {
-
+public class ParentDto {
     Long id;
     String meno;
     String priezvisko;
-    String email;
+    String emailParent;
     String password;
 
     public Long getId() {
@@ -36,12 +31,19 @@ public class OsobaDto {
         this.priezvisko = priezvisko;
     }
 
-    public String getEmail() {return email;}
+    public String getEmailParent() {
+        return emailParent;
+    }
 
-    public void setEmail(String email) {this.email = email;}
+    public void setEmailParent(String emailParent) {
+        this.emailParent = emailParent;
+    }
 
-    public String getPassword() {return password;}
+    public String getPassword() {
+        return password;
+    }
 
-    public void setPassword(String password) {this.password = password;}
-
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

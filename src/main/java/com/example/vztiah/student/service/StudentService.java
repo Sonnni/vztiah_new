@@ -3,11 +3,12 @@ package com.example.vztiah.student.service;
 import com.example.vztiah.student.persistence.StudentEntity;
 import com.example.vztiah.student.persistence.StudentRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Service
 public class StudentService {
     StudentRepository studentRepository;
     public StudentService (StudentRepository studentRepository){
@@ -22,7 +23,7 @@ public class StudentService {
             o2.setId(o1.getId());
             o2.setMeno(o1.getMeno());
             o2.setPriezvisko(o1.getPriezvisko());
-            o2.setEmail_parenta(o1.getEmail_parenta());
+            //o2.setEmailParenta(o1.getEmail_parenta());
             vysledok.add(o2);
         }
         return vysledok;
@@ -32,7 +33,7 @@ public class StudentService {
         StudentEntity studentEntity = new StudentEntity();
         studentEntity.setMeno(studentDto.getMeno());
         studentEntity.setPriezvisko(studentDto.getPriezvisko());
-        studentEntity.setEmail_parenta(studentDto.getEmail_parenta());
+        //studentEntity.setEmail_parenta(studentDto.getEmailParenta());
         studentRepository.save(studentEntity);
     }
 

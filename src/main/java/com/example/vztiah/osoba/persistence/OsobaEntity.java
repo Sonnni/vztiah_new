@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class OsobaEntity {
+
     String meno;
     String priezvisko;
     String email;
